@@ -1,0 +1,25 @@
+Id:
+<br><br>
+<input matInput type="text" formControllName="Id">
+<p *ngIf="registerForm.controls.Id.errors?.required">Id is Required !<br><br></p>
+<br><br>
+Name:
+<br><br>
+ <input matInput type="text" formControllName="Name" required>
+<p *ngIf="registerForm.controls.Name.errors?.required">Name is Required !<br><br></p>
+<p *ngIf="registerForm.controls.Name.errors?.Maxlenght">Name is too long !<br><br></p>
+<br><br>
+password:
+<br><br>
+<input matInput type="text" formControllName="password" required>
+<p *ngIf="registerForm.controls.password.errors?.required">password is Required !<br><br></p>
+<p *ngIf="registerForm.controls.password.errors?.pattern">password isnt in right way !<br><br></p>
+<p *ngIf="registerForm.controls.password.errors?.Maxlenght">password too long !<br><br></p>
+<p *ngIf="registerForm.controls.password.errors?.Minlength">password too short !<br><br></p>
+<br><br>
+Details:
+<br><br>
+<input matInput type="text" [(ngModel)]="details">
+
+<button (click)="onAddId()">Save Employee Details</button>
+
